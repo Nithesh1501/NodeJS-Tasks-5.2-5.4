@@ -8,13 +8,13 @@ const rUrl = (req, res, next) => {
     next();
 };
 
-
+const HTTP = 422 
 const validate = (schema) => (req, res, next) => {
     const {
         error
     } = schema.validate(req.body);
     if (error) {
-        res.status(422).send(error.details[0].message);
+        res.status(HTTP).send(error.details[0].message);
         return;
     }
     next();
