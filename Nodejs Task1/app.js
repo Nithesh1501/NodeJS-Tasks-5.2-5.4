@@ -1,11 +1,14 @@
-let args = process.argv.slice(2);
+const one = 1;
+const two = 2;
+
+let args = process.argv.slice(two);
 // args = args.slice(2,args.length)
-let arr=args.slice(2,args.length).map(Number);
+let arr=args.slice(two,args.length).map(Number);
 
 function calculate()
 {
     checkValidInput();
-    let operation = args.at(1);
+    let operation = args.at(one);
     switch(operation)
     {
         case 'addition':
