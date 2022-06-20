@@ -2,7 +2,6 @@ const one = 1;
 const two = 2;
 
 let args = process.argv.slice(two);
-// args = args.slice(2,args.length)
 let arr=args.slice(two,args.length).map(Number);
 
 function calculate()
@@ -29,7 +28,7 @@ function calculate()
 }
 
 function checkValidInput() {
-    if (arr.length>0) {
+    if (arr.length) {
         arr.forEach((value) => {
         
         if (isNaN(value)) {
