@@ -8,7 +8,7 @@ const { rMethod, rUrl, validate } = require('../middlewares/middleware');
 
 const not_found = 404;
 
-const user_get_request_by_id = (req, res) => {
+const user_Get_Request_By_Id = (req, res) => {
     const uuid = req.params.uuid;
     console.log(req.params);
     const result = users.find((user) => user.uuid === uuid);
@@ -26,7 +26,7 @@ const createUser = (req, res) => {
     res.send({ message: 'New User created' });
 };
 
-const update_user_Request = (req, res) => {
+const update_User_Request = (req, res) => {
     const uuid = req.params.uuid;
     const data = req.body;
     const position = users.findIndex((user) => user.uuid === uuid);
@@ -41,7 +41,7 @@ const update_user_Request = (req, res) => {
     }
 };
 
-const delete_user_Request = (req, res) => {
+const delete_User_Request = (req, res) => {
     const uuid = req.params.uuid;
     const position = users.findIndex((user) => user.uuid === uuid);
     if (position !== -1) {
